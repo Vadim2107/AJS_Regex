@@ -6,7 +6,7 @@ export default class Validator {
   }
 
   validateUsername() {
-    if (/^[-_\d]/.test(this.name) || /\d{4,}/.test(this.name) || /[а-я]+/ig.test(this.name) || /[-_\d]$/.test(this.name)) {
+    if (/^[-_\d]/.test(this.name) || /\d{4,}/.test(this.name) || /[а-я]+/ig.test(this.name) || /[-_\d]$/.test(this.name) || /[^-\w]/.test(this.name)) {
       return 'Invalid name format!!!';
     } else {
       return this.name;
